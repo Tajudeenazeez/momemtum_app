@@ -1,7 +1,7 @@
 const div = document.querySelector("#quote")
 const h1 = document.querySelector("#header")
 const span = document.querySelector("#quote span:last-child")
-const list = document.createDocumentFragment()
+
 
 fetch("https://type.fit/api/quotes")
     .then((response) => {
