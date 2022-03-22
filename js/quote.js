@@ -9,13 +9,13 @@ fetch("https://type.fit/api/quotes")
     })
     .then((data) =>  {
         let myquotes = data
-
         function displayQuote(quote) {
-            h1.textContent = `${myquotes[Math.floor(Math.random() * myquotes.length)].text}`
-            span.textContent = `${myquotes[Math.floor(Math.random() * myquotes.length)].author}` 
+            let index = Math.floor(Math.random() * quote.length)
+            h1.textContent = `${quote[index].text}`
+            span.textContent = `${quote[index].author}`
         }
         displayQuote(myquotes)
-        setInterval(displayQuote, 9000)
+        //setInterval(displayQuote, 9000)
     }) 
     .catch(error => {
         console.error("learn to use me")
