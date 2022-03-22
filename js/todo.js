@@ -13,13 +13,16 @@ function saveTodos () {
 function handleDeleteTodo (event) {
     let li = event.target.parentNode
     li.remove()
+    todos = todos.filter((todo) => todo.id !== parseInt(li.id))
+    saveTodos()
 }
 
 function paintSaveInput (newtodo) {
     let li = document.createElement("li")
     let span = document.createElement("span")
     let button = document.createElement("button")
-    span.textContent = newtodo
+    li.id = newtodo.id
+    span.textContent = newtodo.text
     button.textContent = "❌"
     button.addEventListener("click", handleDeleteTodo)
     li.appendChild(span)
@@ -33,8 +36,12 @@ function handleToDoFormSubmit (event) {
     let saveInput = todoInput.value
     //localStorage.setItem(SAVE_INPUT, JSON.stringify(saveInput))
     todoInput.value = ""
-    todos.push(saveInput)
-    paintSaveInput(saveInput)   
+    let saveInputObj = {
+        id:Date.now(),
+        text: saveInput
+    }
+    todos.push(saveInputObj)
+    paintSaveInput(saveInputObj)   
     saveTodos()
 }
 
