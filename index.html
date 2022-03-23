@@ -14,7 +14,10 @@
        placeholder="What is your name" 
        required 
        maxlength="15">
-       <button id="btn-submit" type="submit">log in</button>
+       <button id="btn-login" type="submit">log in</button>
+    </form>
+    <form id="logOut-form" action="#">
+        <button id="btn-logout" type="submit">log out</button>
     </form>
     <h1 id="greeting"></h1>
     <h2 id="clock">00:00:00</h2>
@@ -27,6 +30,10 @@
         <h1 id="header"></h1>
         <span></span>
     </div>
+    <div id="weather-container">
+        <span id="cloud"></span>
+        <span id="country"></span>
+    </div>
     <div id="image">
         <img src="" alt="">
     </div>
@@ -37,5 +44,6 @@
     <script src="js/quote.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>
