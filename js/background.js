@@ -15,15 +15,10 @@ fetch("https://api.unsplash.com/photos/?client_id=1TBouS1Iic1S-rruqwNJqovEmxQgTQ
             myimg.appendChild(img)
         }
         displayimage(myimage)
-        //setInterval(displayimage, 1000)
     }) 
     .catch(error => {
         console.error("learn to use me ...olobe!")
     })
-
-    
-
- 
   
 
 

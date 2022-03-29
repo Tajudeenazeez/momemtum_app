@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <form id="login-form" action="#">
-       <input 
-       id="login-id"
-       type="text" 
-       placeholder="What is your name" 
-       required 
-       maxlength="15">
-       <button id="btn-login" type="submit">log in</button>
-    </form>
-    <form id="logOut-form" action="#">
-        <button id="btn-logout" type="submit">log out</button>
-    </form>
-    <h1 id="greeting"></h1>
+   <main>
+    <form id="login-form" class="hidden" >
+        <input 
+        id="login-id"
+        type="text" 
+        placeholder="What is your name" 
+        required 
+        maxlength="15">
+        <button id="btn-login" type="submit">log in</button>
+     </form>
+   </main>
+    <button class="hidden" id="btn-logout">log out</button>
+
+    <h1 class="hidden" id="greeting"></h1>
     <h2 id="clock">00:00:00</h2>
     <form action="" id="todoForm">
         <input id="todoInput" type="text" placeholder="write your todo and press Enter" required>
